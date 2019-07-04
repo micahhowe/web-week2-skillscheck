@@ -101,8 +101,9 @@ let bigOrSmall = (arr) => {
 let arrayReverser = (arr) => {
 	let reversed = []
 	for(i=0;i<arr.length; i++){
-		
+		reversed.unshift(arr[i])
 	}
+	return reversed;
 }
 //////////////////PROBLEM 14 - 18 Setup////////////////////
 
@@ -115,24 +116,37 @@ const myNumbers = [3, 55, 788, 2, 1]
 // First, let's use .map to create a new array that doubles each number. Call the new array 'doubled'
 
 // Code Here
+let doubled = myNumbers.map(function (el){
+	return el * 2
+})
 
 //////////////////PROBLEM 15////////////////////
 
 // Now lets use .filter to only get the nubmer(s) greater than 100. Call the new array 'filtered'
 
 // Code Here
-
+let filtered = myNumbers.filter(function(el) {
+	return el > 100
+})
 //////////////////PROBLEM 16////////////////////
 
 // Next up, reduce to get the total of the array. call the new array 'total'
 
 // Code Here
-
+let total = myNumbers.reduce((acc,el,i,arr) =>{
+	return acc + el
+})
 //////////////////PROBLEM 17////////////////////
 
 // Last, lets use .forEach to find the index of each item in the array. First, create an empty array called myNumbersIndex. Next, using forEach, push each items index from the myNumbers array to the myNumbersIndex array
 
 // Code Here
+
+let myNumbersIndex = []
+myNumbers.forEach(function (el,i,arr){
+	myNumbersIndex.push(i)
+})
+console.log(myNumbersIndex)
 
 //////////////////PROBLEM 18////////////////////
 
@@ -140,7 +154,9 @@ const myNumbers = [3, 55, 788, 2, 1]
 const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
 
 // Code Here
-
+let forTheLoveOfGeorge = notGeorge.map(function(el,i,arr){
+	return 'George'
+})
 //////////////////PROBLEM 19////////////////////
 
 // Using the people array, let's filter out everyone that isn't our friend to a new array called 'enemies'. Use .filter()
@@ -154,9 +170,14 @@ const people = [
 ]
 
 // Code Here
-
+let enemies = people.filter(function(el,i,arr){
+	return el.friend == false
+})
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, let's get a total of the awesomeLevel from all the people. Call the new array 'totallyAwesome'. Use .reduce()
 
 // Code Here
+let totallyAwesome = people.reduce(function(acc,el,i,arr){
+	return acc + el.awesomeLevel
+},0)
