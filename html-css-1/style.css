@@ -51,9 +51,25 @@ body{
 
 }
 header{
-    height:8vh;
+    display:flex;
+    height:6vh;
     width:100vw;
     background:grey;
+    color:white;
+    list-style:none;
+    justify-content: space-between;
+    
+}
+.logo{
+    display: flex;
+    margin: 15px 0 0 35px;
+    font-size:24px;
+}
+.nav{
+    display:flex;
+    justify-content: space-evenly;
+    width:30vw;
+    margin-top:20px;
 }
 .hero{
     background:black;
@@ -64,16 +80,50 @@ header{
     align-items:center;
 }
 .hero p{
-    color:yellow;
-    font-size:40px;
+    color:rgb(220, 220, 91);
+    font-size:50px;
 }
 .content{
     background:white;
-    height:52vh;
+    height:59vh;
     width:100vw;
+    display:flex;
+    display:inline-block;
+    justify-content: space-around;
+    align-items: column;
+}
+.green-images {
+    display:flex;
+    justify-content: space-evenly;
+    margin: 35px 0 40px 0;
+}
+.green-box{
+    background:rgb(199, 255, 199);
+    height:180px;
+    width:180px;
+    border-radius:10px;
+}
+.orange-images{
+    display:flex;
+    justify-content: space-evenly;
+    margin: 0 0 40px 0;
+}
+.orange-box{
+    background:rgb(242, 192, 100);
+    height:150px;
+    width:330px;
+}
+.other-content{
+    display:flex;
+    justify-content: space-evenly;
+    font-size:10px;
+    margin: 0 12% 0 12%;
+}
+.other-content img{
+    height:100px;
 }
 footer{
-    background:midnightblue;
-    height:15vh;
+    background:rgba(46, 46, 80, 0.981);
+    height:10vh;
     width:100vw;
 }
